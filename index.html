@@ -3069,7 +3069,7 @@
         </svg>
       `,
 
-      tiktok: `
+      : `
         <svg viewBox="0 0 24 24">
           <path d="M16.7 3c.4 2.4 1.8 3.8 4.3 4v4c-1.7 0-3.1-.5-4.3-1.3v5.7c0 3.2-2.3 5.6-5.7 5.6-3.1 0-5.5-2.2-5.5-5.2 0-3.2 2.5-5.4 6.1-5.3v4c-1.3-.2-2.2.4-2.2 1.4 0 .9.7 1.4 1.6 1.4 1 0 1.8-.6 1.8-2V3h3.9z"/>
         </svg>
@@ -4604,9 +4604,9 @@
 
     bindInterfaceHoverSounds();
 
-    const isTikTokInAppBrowser =
+    const isInAppBrowser =
       document.documentElement.classList.contains(
-        "tiktok-inapp-browser"
+        "-inapp-browser"
       );
 
     let unlockBeepTimer = 0;
@@ -4685,7 +4685,7 @@
     function scheduleFirstTrackRelease() {
       clearTimeout(entryTrackReleaseTimer);
 
-      if (!isTikTokInAppBrowser) {
+      if (!isInAppBrowser) {
         releaseFirstTrackAtUnlock();
         return;
       }
@@ -4726,7 +4726,7 @@
             entryTrackReleaseTimer
           );
 
-          // Give TikTok's WebView one clean frame after
+          // Give 's WebView one clean frame after
           // the shackle completes before starting media.
           requestAnimationFrame(() => {
             window.setTimeout(
@@ -8846,7 +8846,7 @@
     },
     {
       "label": "tiktok",
-      "url": "https://www.tiktok.com/@bwnies",
+      "url": "https://www.tiktok.com/@m1s4",
       "icon": "tiktok",
       "customIcon": "tiktok.png",
       "iconColor": "#574F64",
